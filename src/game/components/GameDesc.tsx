@@ -1,4 +1,4 @@
-import structures from "../../data";
+import gamesDescription from "../../data";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -14,16 +14,16 @@ const StyledTypography = styled(Typography)<TypographyProps>(({ theme }) => ({
     marginBottom: theme.spacing(1),
 }));
 
-function Building() {
+function GameDesc() {
     const { id } = useParams();
-    const building = structures[parseInt(id || '0')];
+    const game = gamesDescription[parseInt(id || '0')];
 
     return (
         <Container maxWidth="lg" sx={{height: '700px', mt: '20px'}}>
             {/* Навигация */}
             <Box mb={2}>
                 <Typography variant="body2">
-                    <Link to="/">Главная</Link> → {building.title}
+                    <Link to="/">Главная</Link> → {game.title}
                 </Typography>
             </Box>
             <Card
@@ -33,15 +33,15 @@ function Building() {
             >
                 <CardMedia
                     component="img"
-                    alt={building.title}
-                    image={building.img}
+                    alt={game.title}
+                    image={game.img}
                 />
                 <Box>
                     <CardContent>
                         <Typography gutterBottom variant="h5">
-                            {building.title}
+                            {game.title}
                         </Typography>
-                        {building.description.map((item, ind) => (
+                        {game.description.map((item, ind) => (
                             <StyledTypography key={ind} variant="body2">
                                 {item}
                             </StyledTypography>
@@ -53,4 +53,4 @@ function Building() {
     );
 }
 
-export default Building;
+export default GameDesc;

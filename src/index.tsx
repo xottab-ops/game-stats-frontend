@@ -9,7 +9,7 @@ import {
 
 import List from "./list/List";
 import Main from "./main/Main";
-import Building from "./building/Building";
+import Game from "./game/Game";
 import Chart from "./chart/Chart";
 const router = createBrowserRouter([
     {
@@ -21,8 +21,8 @@ const router = createBrowserRouter([
         element: <List />,
     },
     {
-        path: "/building/:id",
-        element: <Building />
+        path: "/game/:id",
+        element: <Game />
     },
     {
         path: "/charts",

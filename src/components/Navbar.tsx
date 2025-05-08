@@ -51,7 +51,7 @@ function Navbar({ active }: ComponentProps) {
             <Container maxWidth="xl">
                 <StyledToolbar>
                     <Typography variant="h6" sx={{ color: '#5d8aa8' }}>
-                        Самые высокие здания и сооружения
+                        Топ 100 игр современности
                     </Typography>
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
@@ -67,7 +67,7 @@ function Navbar({ active }: ComponentProps) {
                                 variant={active === "2" ? "contained" : "text"}
                                 color="info"
                                 size="medium">
-                                Список зданий
+                                Список игр
                             </Button>
                         </Link>
                         <Link to="/charts">

@@ -1,4 +1,4 @@
-import structures from "../../data";
+import gamesDescription from "../../data";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Container from "@mui/material/Container";
@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Link } from "react-router-dom";
 
-const imgData=structures.slice(0, -1);
+const imgData=gamesDescription.slice(0, -1);
 
 
 function Gallery() {
@@ -25,7 +25,7 @@ function Gallery() {
 
                            cols={ 4 } gap={ 8 }>
                     {imgData.map((item, index) => (
-                        <Link key={ index } to={ "/building/" + index }>
+                        <Link key={ index } to={ "/game/" + index }>
                             <ImageListItem key={ item.img }>
                                 <img
                                     srcSet={ item.img }

@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import GroupGrid from "./components/GroupGrid"
-import {years, countries, types } from "./groupdata";
+import {developers, publishers} from "./groupdata";
 import React from "react";
 import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
@@ -10,24 +10,21 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import GroupChart from "./components/GroupChart";
 
-type tSelect = "Страна" | "Год" | "Тип";
+type tSelect = "Разработчик" | "Издатель";
 
 function Chart() {
-    const [group, setGroup] = React.useState<tSelect>('Страна');
-    const [groupData, setGroupData] = React.useState(countries);
+    const [group, setGroup] = React.useState<tSelect>('Разработчик');
+    const [groupData, setGroupData] = React.useState(developers);
     const handleChange = (event: SelectChangeEvent) => {
         const selectedGroup = event.target.value as tSelect;
         setGroup(selectedGroup);
 
         switch (selectedGroup) {
-            case 'Страна':
-                setGroupData(countries);
+            case 'Разработчик':
+                setGroupData(developers);
                 break;
-            case 'Год':
-                setGroupData(years);
-                break;
-            case 'Тип':
-                setGroupData(types);
+            case 'Издатель':
+                setGroupData(publishers);
                 break;
             default:
                 setGroupData([]);
@@ -47,9 +44,8 @@ function Chart() {
                         label="Группировать по"
                         onChange={ handleChange }
                     >
-                        <MenuItem value="Страна"> Стране </MenuItem>
-                        <MenuItem value="Год"> Году </MenuItem>
-                        <MenuItem value="Тип"> Типу </MenuItem>
+                        <MenuItem value="Разработчик"> Разработчику </MenuItem>
+                        <MenuItem value="Издатель"> Издателю </MenuItem>
                     </Select>
                 </FormControl>
             </Box>

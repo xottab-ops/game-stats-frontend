@@ -1,8 +1,8 @@
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import BuildCard from "./BuildCard"
-import structures from "../../data";
-const cardData = [structures[3], structures[6], structures[9], structures[7]]
+import GameCard from "./GameCard"
+import gamesDescription from "../../data";
+const cardData = [gamesDescription[3], gamesDescription[6], gamesDescription[9], gamesDescription[7]]
 
 
 function Content() {
@@ -11,7 +11,7 @@ function Content() {
             <Grid container spacing={{ xs: 3, md: 6 }}>
                 {cardData.map((item, index) => (
                     <Grid key={index} size={{ xs: 12, md: 6 }} >
-                        <BuildCard building={ item } index={ index }/>
+                        <GameCard building={ item } index={ index }/>
                     </Grid>
                 ))}
             </Grid>

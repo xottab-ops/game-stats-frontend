@@ -22,7 +22,7 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
     marginBottom: theme.spacing(1.5),
 }));
 
-function BuildCard({ building, index }: ComponentProps) {
+function GameCard({ building, index }: ComponentProps) {
     const isEven = index % 2 === 0;
 
     return (
@@ -51,4 +51,4 @@ function BuildCard({ building, index }: ComponentProps) {
         </Card>
     );
 }
-export default BuildCard;
+export default GameCard;

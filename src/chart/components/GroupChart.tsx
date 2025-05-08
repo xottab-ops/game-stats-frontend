@@ -15,7 +15,7 @@ function GroupChart({ data }: GroupProps) {
     const chartSetting = {
         yAxis: [
             {
-                label: 'Высота(м)',
+                label: 'Цена($)',
             },
         ],
         height: 500,
@@ -29,9 +29,9 @@ function GroupChart({ data }: GroupProps) {
     };
 
     const [series, setSeries] = React.useState({
-        'Максимальная высота': true,
-        'Средняя высота': false,
-        'Минимальная высота': false,
+        'Максимальная цена': true,
+        'Средняя цена': false,
+        'Минимальная цена': false,
     });
     let seriesY = Object.entries(series)
         .filter(item => item[1] === true)
@@ -50,8 +50,7 @@ function GroupChart({ data }: GroupProps) {
                 series={seriesY}
                 slotProps={{
                     legend: {
-                        position: { vertical: 'bottom', horizontal: 'middle' },
-                        padding: 0,
+                        position: { vertical: 'bottom', horizontal: 'center' },
                     },
                 }}
                 {...chartSetting}
@@ -64,8 +63,7 @@ function GroupChart({ data }: GroupProps) {
                 series={ seriesY}
                 slotProps={{
                     legend: {
-                        position: { vertical: 'bottom', horizontal: 'middle' },
-                        padding: 0,
+                        position: { vertical: 'bottom', horizontal: 'center' },
                     },
                 }}
                 {...chartSetting}

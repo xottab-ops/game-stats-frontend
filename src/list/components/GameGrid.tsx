@@ -1,4 +1,4 @@
-import buildings from "../table";
+import games from "../table";
 import {
     DataGrid,
     GridRowsProp,
@@ -21,7 +21,7 @@ import { Menu } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 
 
-function BuildingsGrid() {
+function GameGrid() {
 
     function CustomToolbar() {
         const [exportMenuOpen, setExportMenuOpen] = React.useState(false);
@@ -100,14 +100,16 @@ function BuildingsGrid() {
         )
     }
 
-    const rows: GridRowsProp = buildings;
+    const rows: GridRowsProp = games;
     const columns: GridColDef[] = [
         { field: 'Название', headerName: 'Название', flex: 1 },
-        { field: 'Тип', flex: 0.5 },
-        { field: 'Страна', flex: 0.5 },
-        { field: 'Город', flex: 0.5 },
-        { field: 'Год' },
-        { field: 'Высота'},
+        { field: 'Издатель', flex: 0.7 },
+        { field: 'Разработчик', flex: 0.7 },
+        { field: 'Категории', flex: 1 },
+        { field: 'Платформы', flex: 1 },
+        { field: 'Цена', flex: 0.4 },
+        { field: 'Количество положительных отзывов', flex: 0.4 },
+        { field: 'Количество отрицательных отзывов', flex: 0.4 },
     ];
 
     return (
@@ -124,4 +126,4 @@ function BuildingsGrid() {
         </Container>
     );
 }
-export default BuildingsGrid;
+export default GameGrid;

@@ -12,7 +12,7 @@ function Footer() {
             }}
         >
             <Typography variant="body2" color="text.secondary">
-                © 2025 Самые высокие здания. Все права защищены.
+                © Топовые игры Эвер. Все права защищены.
             </Typography>
         </Box>
     );

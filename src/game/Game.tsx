@@ -1,14 +1,14 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer';
-import BuildingCard from './components/BuildingCard'
+import GameDesc from './components/GameDesc'
 
-function Building() {
+function Game() {
     return (
         <div>
             <Navbar active="1"/>
-            <BuildingCard/>
+            <GameDesc/>
             <Footer/>
         </div>
     );
 }
-export default Building;
+export default Game;
