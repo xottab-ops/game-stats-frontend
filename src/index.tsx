@@ -11,6 +11,9 @@ import List from "./pages/list/List";
 import Main from "./pages/main/Main";
 import Game from "./pages/game/Game";
 import Chart from "./pages/chart/Chart";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+
+
 const router = createBrowserRouter([
     {
         path: "",
@@ -30,12 +33,16 @@ const router = createBrowserRouter([
     },
 ])
 
+const queryClient = new QueryClient();
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
   </React.StrictMode>
 );
 
