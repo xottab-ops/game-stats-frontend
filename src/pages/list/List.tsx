@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 import GameGrid from "./components/GameGrid";
-import Footer from "../components/Footer"
+import Footer from "../../components/Footer"
 
 function List(){
     return (

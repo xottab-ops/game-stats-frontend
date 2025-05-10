@@ -7,10 +7,10 @@ import {
     RouterProvider,
 } from "react-router-dom";
 
-import List from "./list/List";
-import Main from "./main/Main";
-import Game from "./game/Game";
-import Chart from "./chart/Chart";
+import List from "./pages/list/List";
+import Main from "./pages/main/Main";
+import Game from "./pages/game/Game";
+import Chart from "./pages/chart/Chart";
 const router = createBrowserRouter([
     {
         path: "",

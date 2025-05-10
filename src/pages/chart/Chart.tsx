@@ -1,5 +1,5 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import GroupGrid from "./components/GroupGrid"
 import {developers, publishers} from "./groupdata";
 import React from "react";

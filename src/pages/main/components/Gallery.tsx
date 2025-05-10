@@ -1,4 +1,4 @@
-import gamesDescription from "../../data";
+import gamesDescription from "../../../data";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Container from "@mui/material/Container";
