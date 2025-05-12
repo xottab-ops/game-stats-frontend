@@ -1,4 +1,4 @@
-import Main from "./main/Main";
+import Main from "./pages/main/Main";
 function App() {
   return (
       <>

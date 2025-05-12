@@ -29,14 +29,19 @@ function GroupChart({ data }: GroupProps) {
     };
 
     const [series, setSeries] = React.useState({
-        'Максимальная цена': true,
-        'Средняя цена': false,
-        'Минимальная цена': false,
+        'maxPrice': true,
+        'avgPrice': false,
+        'minPrice': false,
     });
+    const labels = {
+        'maxPrice': 'Максимальная цена',
+        'avgPrice': 'Средняя цена',
+        'minPrice': 'Минимальная цена',
+    }
     let seriesY = Object.entries(series)
         .filter(item => item[1] === true)
         .map(item => {
-            return {"dataKey": item[0], "label": item[0]}
+            return {"dataKey": item[0], "label": labels[item[0]]}
         });
 
     return (
@@ -46,7 +51,7 @@ function GroupChart({ data }: GroupProps) {
             <BarChart
                 barLabel={seriesY.length === 1 ? "value" : undefined}
                 dataset={data}
-                xAxis={[{ scaleType: 'band', dataKey: 'Группа' }]}
+                xAxis={[{ scaleType: 'band', dataKey: 'name' }]}
                 series={seriesY}
                 slotProps={{
                     legend: {
@@ -59,7 +64,7 @@ function GroupChart({ data }: GroupProps) {
             ) : (
             <LineChart
                 dataset={ data }
-                xAxis={[{ scaleType: 'band', dataKey: 'Группа' }]}
+                xAxis={[{ scaleType: 'band', dataKey: 'name' }]}
                 series={ seriesY}
                 slotProps={{
                     legend: {
