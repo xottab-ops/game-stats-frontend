@@ -36,16 +36,16 @@ function Chart() {
 
     if (isLoadingDevelopers || isLoadingPublishers)
         return (
-            <Container maxWidth="lg" sx={{ height: "700px", mt: "20px" }}>
+            <><Navbar active="3"/><Container maxWidth="lg" sx={{ height: "700px", mt: "20px" }}>
                 <CircularProgress />
-            </Container>
+            </Container><Footer/></>
         );
 
     if (errorDevelopers || errorPublishers || !developersData || !publishersData)
         return (
-            <Container maxWidth="lg" sx={{ height: "700px", mt: "20px" }}>
+            <><Navbar active="3"/><Container maxWidth="lg" sx={{height: "700px", mt: "20px"}}>
                 <Typography>Ошибка при загрузке данных</Typography>
-            </Container>
+            </Container><Footer/></>
         );
 
 
