@@ -27,3 +27,19 @@ export interface Game {
     price: number;
     release_date: string;
 }
+
+export interface AggregateDeveloper {
+    developer_id: number;
+    developer_name: string;
+    min_price: number;
+    max_price: number;
+    avg_price: number;
+}
+
+export interface AggregatePublisher {
+    publisher_id: number;
+    publisher_name: string;
+    min_price: number;
+    max_price: number;
+    avg_price: number;
+}
