@@ -5,9 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: typescript_frontend2
+    container_name: typescript_frontend
     ports:
-      - "3005:${REACT_APP_PORT:-3000}"
+      - "3000:${REACT_APP_PORT:-3000}"
     env_file:
       - .env
     volumes:
