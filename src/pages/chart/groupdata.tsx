@@ -1,9 +1,9 @@
 export type tGroup = {
       "id": number, 
-      "Группа": string | number,
-      "Средняя цена": number ,
-      "Максимальная цена": number ,
-      "Минимальная цена": number,
+      "name": string | number,
+      "avgPrice": number ,
+      "maxPrice": number ,
+      "minPrice": number,
   }[];
 
 
@@ -12,285 +12,285 @@ export type tGroup = {
 export const developers: tGroup = [
         {
             "id": 1,
-            "Группа": "Choice of Games",
-            "Средняя цена": 3.85,
-            "Максимальная цена": 5.19,
-            "Минимальная цена": 2.09
+            "name": "Choice of Games",
+            "avgPrice": 3.85,
+            "maxPrice": 5.19,
+            "minPrice": 2.09
         },
         {
             "id": 2,
-            "Группа": "KOEI TECMO GAMES CO., LTD.",
-            "Средняя цена": 5.01,
-            "Максимальная цена": 15.99,
-            "Минимальная цена": 0.0
+            "name": "KOEI TECMO GAMES CO., LTD.",
+            "avgPrice": 5.01,
+            "maxPrice": 15.99,
+            "minPrice": 0.0
         },
         {
             "id": 3,
-            "Группа": "Ripknot Systems",
-            "Средняя цена": 8.69,
-            "Максимальная цена": 20.99,
-            "Минимальная цена": 4.99
+            "name": "Ripknot Systems",
+            "avgPrice": 8.69,
+            "maxPrice": 20.99,
+            "minPrice": 4.99
         },
         {
             "id": 4,
-            "Группа": "Laush Dmitriy Sergeevich",
-            "Средняя цена": 1.81,
-            "Максимальная цена": 4.79,
-            "Минимальная цена": 0.79
+            "name": "Laush Dmitriy Sergeevich",
+            "avgPrice": 1.81,
+            "maxPrice": 4.79,
+            "minPrice": 0.79
         },
         {
             "id": 5,
-            "Группа": "Nikita \"Ghost_RUS\"",
-            "Средняя цена": 1.17,
-            "Максимальная цена": 4.79,
-            "Минимальная цена": 0.79
+            "name": "Nikita \"Ghost_RUS\"",
+            "avgPrice": 1.17,
+            "maxPrice": 4.79,
+            "minPrice": 0.79
         },
         {
             "id": 6,
-            "Группа": "Dexion Games",
-            "Средняя цена": 0.88,
-            "Максимальная цена": 2.09,
-            "Минимальная цена": 0.79
+            "name": "Dexion Games",
+            "avgPrice": 0.88,
+            "maxPrice": 2.09,
+            "minPrice": 0.79
         },
         {
             "id": 7,
-            "Группа": "RewindApp",
-            "Средняя цена": 0.95,
-            "Максимальная цена": 3.99,
-            "Минимальная цена": 0.79
+            "name": "RewindApp",
+            "avgPrice": 0.95,
+            "maxPrice": 3.99,
+            "minPrice": 0.79
         },
         {
             "id": 8,
-            "Группа": "Hosted Games",
-            "Средняя цена": 3.28,
-            "Максимальная цена": 5.79,
-            "Минимальная цена": 2.09
+            "name": "Hosted Games",
+            "avgPrice": 3.28,
+            "maxPrice": 5.79,
+            "minPrice": 2.09
         },
         {
             "id": 9,
-            "Группа": "Blender Games",
-            "Средняя цена": 0.78,
-            "Максимальная цена": 0.79,
-            "Минимальная цена": 0.79
+            "name": "Blender Games",
+            "avgPrice": 0.78,
+            "maxPrice": 0.79,
+            "minPrice": 0.79
         },
         {
             "id": 10,
-            "Группа": "Humongous Entertainment",
-            "Средняя цена": 4.7,
-            "Максимальная цена": 4.99,
-            "Минимальная цена": 3.99
+            "name": "Humongous Entertainment",
+            "avgPrice": 4.7,
+            "maxPrice": 4.99,
+            "minPrice": 3.99
         },
         {
             "id": 11,
-            "Группа": "For Kids",
-            "Средняя цена": 1.56,
-            "Максимальная цена": 7.19,
-            "Минимальная цена": 0.0
+            "name": "For Kids",
+            "avgPrice": 1.56,
+            "maxPrice": 7.19,
+            "minPrice": 0.0
         },
         {
             "id": 12,
-            "Группа": "EnsenaSoft",
-            "Средняя цена": 1.61,
-            "Максимальная цена": 4.79,
-            "Минимальная цена": 0.0
+            "name": "EnsenaSoft",
+            "avgPrice": 1.61,
+            "maxPrice": 4.79,
+            "minPrice": 0.0
         },
         {
             "id": 13,
-            "Группа": "Eipix Entertainment",
-            "Средняя цена": 7.43,
-            "Максимальная цена": 10.99,
-            "Минимальная цена": 6.99
+            "name": "Eipix Entertainment",
+            "avgPrice": 7.43,
+            "maxPrice": 10.99,
+            "minPrice": 6.99
         },
         {
             "id": 14,
-            "Группа": "Nekyau Games",
-            "Средняя цена": 0.78,
-            "Максимальная цена": 0.79,
-            "Минимальная цена": 0.79
+            "name": "Nekyau Games",
+            "avgPrice": 0.78,
+            "maxPrice": 0.79,
+            "minPrice": 0.79
         },
         {
             "id": 15,
-            "Группа": "Warfare Studios",
-            "Средняя цена": 4.51,
-            "Максимальная цена": 6.99,
-            "Минимальная цена": 2.09
+            "name": "Warfare Studios",
+            "avgPrice": 4.51,
+            "maxPrice": 6.99,
+            "minPrice": 2.09
         },
         {
             "id": 16,
-            "Группа": "HeR Interactive",
-            "Средняя цена": 7.08,
-            "Максимальная цена": 15.49,
-            "Минимальная цена": 4.99
+            "name": "HeR Interactive",
+            "avgPrice": 7.08,
+            "maxPrice": 15.49,
+            "minPrice": 4.99
         },
         {
             "id": 17,
-            "Группа": "MumboJumbo",
-            "Средняя цена": 6.61,
-            "Максимальная цена": 9.99,
-            "Минимальная цена": 4.99
+            "name": "MumboJumbo",
+            "avgPrice": 6.61,
+            "maxPrice": 9.99,
+            "minPrice": 4.99
         },
         {
             "id": 18,
-            "Группа": "ERS G Studios",
-            "Средняя цена": 7.17,
-            "Максимальная цена": 10.29,
-            "Минимальная цена": 4.99
+            "name": "ERS G Studios",
+            "avgPrice": 7.17,
+            "maxPrice": 10.29,
+            "minPrice": 4.99
         },
         {
             "id": 19,
-            "Группа": "Valve",
-            "Средняя цена": 4.97,
-            "Максимальная цена": 15.99,
-            "Минимальная цена": 0.0
+            "name": "Valve",
+            "avgPrice": 4.97,
+            "maxPrice": 15.99,
+            "minPrice": 0.0
         },
         {
             "id": 20,
-            "Группа": "Creobit",
-            "Средняя цена": 3.7,
-            "Максимальная цена": 3.99,
-            "Минимальная цена": 0.0
+            "name": "Creobit",
+            "avgPrice": 3.7,
+            "maxPrice": 3.99,
+            "minPrice": 0.0
         }
     ];
 
 export const publishers: tGroup = [
     {
         "id": 1,
-        "Группа": "Big Fish Games",
-        "Средняя цена": 6.82,
-        "Максимальная цена": 10.99,
-        "Минимальная цена": 2.79
+        "name": "Big Fish Games",
+        "avgPrice": 6.82,
+        "maxPrice": 10.99,
+        "minPrice": 2.79
     },
     {
         "id": 2,
-        "Группа": "Strategy First",
-        "Средняя цена": 7.63,
-        "Максимальная цена": 34.95,
-        "Минимальная цена": 3.0
+        "name": "Strategy First",
+        "avgPrice": 7.63,
+        "maxPrice": 34.95,
+        "minPrice": 3.0
     },
     {
         "id": 3,
-        "Группа": "Ubisoft",
-        "Средняя цена": 16.48,
-        "Максимальная цена": 49.99,
-        "Минимальная цена": 3.0
+        "name": "Ubisoft",
+        "avgPrice": 16.48,
+        "maxPrice": 49.99,
+        "minPrice": 3.0
     },
     {
         "id": 4,
-        "Группа": "THQ Nordic",
-        "Средняя цена": 12.85,
-        "Максимальная цена": 44.99,
-        "Минимальная цена": 3.0
+        "name": "THQ Nordic",
+        "avgPrice": 12.85,
+        "maxPrice": 44.99,
+        "minPrice": 3.0
     },
     {
         "id": 5,
-        "Группа": "Square Enix",
-        "Средняя цена": 12.19,
-        "Максимальная цена": 44.99,
-        "Минимальная цена": 4.0
+        "name": "Square Enix",
+        "avgPrice": 12.19,
+        "maxPrice": 44.99,
+        "minPrice": 4.0
     },
     {
         "id": 6,
-        "Группа": "Sekai Project",
-        "Средняя цена": 9.82,
-        "Максимальная цена": 30.99,
-        "Минимальная цена": 3.0
+        "name": "Sekai Project",
+        "avgPrice": 9.82,
+        "maxPrice": 30.99,
+        "minPrice": 3.0
     },
     {
         "id": 7,
-        "Группа": "Choice of Games",
-        "Средняя цена": 3.85,
-        "Максимальная цена": 5.19,
-        "Минимальная цена": 2.09
+        "name": "Choice of Games",
+        "avgPrice": 3.85,
+        "maxPrice": 5.19,
+        "minPrice": 2.09
     },
     {
         "id": 8,
-        "Группа": "1C Entertainment",
-        "Средняя цена": 6.19,
-        "Максимальная цена": 27.79,
-        "Минимальная цена": 2.0
+        "name": "1C Entertainment",
+        "avgPrice": 6.19,
+        "maxPrice": 27.79,
+        "minPrice": 2.0
     },
     {
         "id": 9,
-        "Группа": "Dagestan Technology",
-        "Средняя цена": 2.69,
-        "Максимальная цена": 3.99,
-        "Минимальная цена": 1.79
+        "name": "Dagestan Technology",
+        "avgPrice": 2.69,
+        "maxPrice": 3.99,
+        "minPrice": 1.79
     },
     {
         "id": 10,
-        "Группа": "SEGA",
-        "Средняя цена": 13.31,
-        "Максимальная цена": 49.99,
-        "Минимальная цена": 4.11
+        "name": "SEGA",
+        "avgPrice": 13.31,
+        "maxPrice": 49.99,
+        "minPrice": 4.11
     },
     {
         "id": 11,
-        "Группа": "Degica",
-        "Средняя цена": 12.47,
-        "Максимальная цена": 60.99,
-        "Минимальная цена": 1.59
+        "name": "Degica",
+        "avgPrice": 12.47,
+        "maxPrice": 60.99,
+        "minPrice": 1.59
     },
     {
         "id": 12,
-        "Группа": "Plug In Digital",
-        "Средняя цена": 6.38,
-        "Максимальная цена": 29.99,
-        "Минимальная цена": 4.2
+        "name": "Plug In Digital",
+        "avgPrice": 6.38,
+        "maxPrice": 29.99,
+        "minPrice": 4.2
     },
     {
         "id": 13,
-        "Группа": "KOEI TECMO GAMES CO., LTD.",
-        "Средняя цена": 27.92,
-        "Максимальная цена": 54.99,
-        "Минимальная цена": 4.3
+        "name": "KOEI TECMO GAMES CO., LTD.",
+        "avgPrice": 27.92,
+        "maxPrice": 54.99,
+        "minPrice": 4.3
     },
     {
         "id": 14,
-        "Группа": "Slitherine Ltd.",
-        "Средняя цена": 22.22,
-        "Максимальная цена": 60.99,
-        "Минимальная цена": 2.05
+        "name": "Slitherine Ltd.",
+        "avgPrice": 22.22,
+        "maxPrice": 60.99,
+        "minPrice": 2.05
     },
     {
         "id": 15,
-        "Группа": "KISS ltd",
-        "Средняя цена": 5.77,
-        "Максимальная цена": 22.99,
-        "Минимальная цена": 1.05
+        "name": "KISS ltd",
+        "avgPrice": 5.77,
+        "maxPrice": 22.99,
+        "minPrice": 1.05
     },
     {
         "id": 16,
-        "Группа": "AGM PLAYISM",
-        "Средняя цена": 5.89,
-        "Максимальная цена": 19.49,
-        "Минимальная цена": 1.02
+        "name": "AGM PLAYISM",
+        "avgPrice": 5.89,
+        "maxPrice": 19.49,
+        "minPrice": 1.02
     },
     {
         "id": 17,
-        "Группа": "Artifex Mundi",
-        "Средняя цена": 7.9,
-        "Максимальная цена": 11.39,
-        "Минимальная цена": 6.99
+        "name": "Artifex Mundi",
+        "avgPrice": 7.9,
+        "maxPrice": 11.39,
+        "minPrice": 6.99
     },
     {
         "id": 18,
-        "Группа": "Buka Entertainment",
-        "Средняя цена": 4.79,
-        "Максимальная цена": 14.99,
-        "Минимальная цена": 1.79
+        "name": "Buka Entertainment",
+        "avgPrice": 4.79,
+        "maxPrice": 14.99,
+        "minPrice": 1.79
     },
     {
         "id": 19,
-        "Группа": "Devolver Digital",
-        "Средняя цена": 9.65,
-        "Максимальная цена": 34.99,
-        "Минимальная цена": 1.0
+        "name": "Devolver Digital",
+        "avgPrice": 9.65,
+        "maxPrice": 34.99,
+        "minPrice": 1.0
     },
     {
         "id": 20,
-        "Группа": "Atriagames",
-        "Средняя цена": 2.11,
-        "Максимальная цена": 7.19,
-        "Минимальная цена": 0.79
+        "name": "Atriagames",
+        "avgPrice": 2.11,
+        "maxPrice": 7.19,
+        "minPrice": 0.79
     }
 ];
