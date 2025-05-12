@@ -5,10 +5,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: typescript_frontend2
     ports:
-      - "3000:${REACT_APP_PORT:-3000}"
+      - "3005:${REACT_APP_PORT:-3000}"
     env_file:
       - .env
     volumes:
       - .:/app
       - /app/node_modules
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:${REACT_APP_PORT:-3000}/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
