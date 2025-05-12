@@ -1,4 +1,4 @@
-# Practice Work with Material-UI
+# Game Statistic (Frontend)
 
 This project is a React-based web application that uses Material-UI (MUI) for building user interfaces. It includes features such as data grids, charts, and API integration.
 
