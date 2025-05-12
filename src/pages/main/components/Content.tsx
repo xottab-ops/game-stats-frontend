@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import GameCard from "./GameCard"
-import gamesDescription from "../../data";
+import gamesDescription from "../../../data";
 const cardData = [gamesDescription[3], gamesDescription[6], gamesDescription[9], gamesDescription[7]]
 
 

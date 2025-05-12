@@ -1,7 +1,5 @@
-import games from "../table";
 import {
     DataGrid,
-    GridRowsProp,
     GridColDef,
     Toolbar,
     ColumnsPanelTrigger,
@@ -17,8 +15,11 @@ import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import Badge from '@mui/material/Badge';
 import React from "react";
-import { Menu } from "@mui/material";
+import { CircularProgress, Menu } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
+import { GameRow } from "../../../types/GameRow";
+import { formatGameToRow } from "../../../utils/formatGameToRow";
+import {useGames} from "../../../hooks/useGames";
 
 
 function GameGrid() {
@@ -100,16 +101,31 @@ function GameGrid() {
         )
     }
 
-    const rows: GridRowsProp = games;
+    const { data, isLoading, error } = useGames();
+
+    console.log("API data:", data);
+
+    if (isLoading) return (
+        <Container maxWidth="lg" sx={{height: '700px', mt: '20px'}}>
+            <CircularProgress />
+        </Container>
+    );
+    if (error || !data) return(
+        <Container maxWidth="lg" sx={{height: '700px', mt: '20px'}}>
+            <Typography>Ошибка при загрузке данных</Typography>
+        </Container>
+    );
+
+    const rows: GameRow[] = data.map(formatGameToRow);
     const columns: GridColDef[] = [
-        { field: 'Название', headerName: 'Название', flex: 1 },
-        { field: 'Издатель', flex: 0.7 },
-        { field: 'Разработчик', flex: 0.7 },
-        { field: 'Категории', flex: 1 },
-        { field: 'Платформы', flex: 1 },
-        { field: 'Цена', flex: 0.4 },
-        { field: 'Количество положительных отзывов', flex: 0.4 },
-        { field: 'Количество отрицательных отзывов', flex: 0.4 },
+        { field: 'name', headerName: 'Название', flex: 1 },
+        { field: 'publisher', headerName: 'Издатель', flex: 0.7 },
+        { field: 'developer', headerName: 'Разработчик', flex: 0.7 },
+        { field: 'categories', headerName: 'Категории', flex: 1 },
+        { field: 'platforms', headerName: 'Платформы', flex: 1 },
+        { field: 'price', headerName: 'Цена', flex: 0.4, type: 'number' },
+        { field: 'positiveRating', headerName: '👍 Положительные отзывы', flex: 0.4, type: 'number' },
+        { field: 'negativeRating', headerName: '👎 Отрицательные отзывы', flex: 0.4, type: 'number' },
     ];
 
     return (

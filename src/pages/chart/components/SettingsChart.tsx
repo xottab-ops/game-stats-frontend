@@ -8,9 +8,9 @@ import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
 
 type tSeries= {
-    'Максимальная цена': boolean,
-    'Средняя цена': boolean,
-    'Минимальная цена': boolean,
+    'maxPrice': boolean,
+    'avgPrice': boolean,
+    'minPrice': boolean,
 }
 
 type CheckboxProps = {
@@ -75,20 +75,20 @@ function SettingChart({series, setSeries, isBar, setIsBar}: CheckboxProps) {
                 </FormLabel>
                 <FormControlLabel
                     control={
-                        <Checkbox checked={series["Максимальная цена"]}
-                                  onChange={handleChange} name="Максимальная цена" />
+                        <Checkbox checked={series["maxPrice"]}
+                                  onChange={handleChange} name="maxPrice" />
                     }
                     label="максимальную цену" />
                 <FormControlLabel
                     control={
-                        <Checkbox checked={series["Средняя цена"]}
-                                  onChange={handleChange} name="Средняя цена" />
+                        <Checkbox checked={series["avgPrice"]}
+                                  onChange={handleChange} name="avgPrice" />
                     }
                     label="среднюю цену" />
                 <FormControlLabel
                     control={
-                        <Checkbox checked={series["Минимальная цена"]}
-                                  onChange={handleChange} name="Минимальная цена" />
+                        <Checkbox checked={series["minPrice"]}
+                                  onChange={handleChange} name="minPrice" />
                     }
                     label="минимальную цену" />
             </FormControl>
