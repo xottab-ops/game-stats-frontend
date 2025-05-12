@@ -31,6 +31,10 @@ const router = createBrowserRouter([
         path: "/charts",
         element: <Chart />
     },
+    {
+        path: "/health",
+        element: <>{JSON.stringify({ status: "OK" })}</>,
+    },
 ])
 
 const queryClient = new QueryClient();
