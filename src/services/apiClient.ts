@@ -1,8 +1,7 @@
-const API_BASE_URL = process.env.REACT_APP_API_HOST || "http://localhost";
-const API_PORT = process.env.REACT_APP_API_PORT || "5000";
+const API_BASE_URL = process.env.REACT_APP_API_HOST || "http://localhost:3000";
 
 export async function apiFetch<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-    const res = await fetch(`${API_BASE_URL}:${API_PORT}${endpoint}`, {
+    const res = await fetch(`${API_BASE_URL}:${endpoint}`, {
         headers: {
             "Content-Type": "application/json",
         },
